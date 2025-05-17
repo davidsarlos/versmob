@@ -422,6 +422,12 @@ body{
   font-weight: bold;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
+
+  /* Új beállítások: */
+  height: 100%; /* hogy betöltse a form helyét */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #feedbackThanks.visible {
