@@ -313,45 +313,27 @@
 		</div>
 	</div>
 	-->
-	<!-- Facebook SDK -->
-	<div id="fb-root"></div>
-	<script async defer crossorigin="anonymous"
-  		src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0"
-  		nonce="FbLikeNonce">
-	</script>
-	<div id="footer">
-		<img class="none" src="portrait2.jpg"/>
 
-<div class="fb-like"
-     data-href="https://versmob.hu"
-     data-layout="button_count"
-     data-action="like"
-     data-size="small"
-     data-share="false">
-</div>
-
-
-	<a href="https://twitter.com/intent/tweet?text=Szerinted%3F%20%23versmob&url=https%3A%2F%2Fversmob.hu"
-   		target="_blank"
-   		rel="noopener noreferrer"
-   		class="x-share-button"
-   		style="display: inline-flex; align-items: center; background-color: #000000; color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-family: Arial, sans-serif;">
-  		<svg viewBox="0 0 24 24" width="18" height="18" fill="white" style="margin-right: 6px;">
-    		<path d="M20.56 3.44c-1.01.45-2.1.76-3.25.89a5.68 5.68 0 0 0 2.48-3.13 11.26 11.26 0 0 1-3.56 1.36A5.63 5.63 0 0 0 16.6 1c-3.1 0-5.63 2.53-5.63 5.63 0 .44.05.87.15 1.28-4.68-.23-8.83-2.47-11.6-5.86a5.59 5.59 0 0 0-.76 2.83c0 1.95.99 3.67 2.5 4.68a5.62 5.62 0 0 1-2.55-.71v.07c0 2.72 1.93 4.98 4.48 5.49a5.66 5.66 0 0 1-2.53.1 5.64 5.64 0 0 0 5.26 3.9A11.28 11.28 0 0 1 0 20.74a15.89 15.89 0 0 0 8.62 2.53c10.34 0 15.99-8.56 15.99-15.98 0-.24-.01-.49-.02-.73a11.45 11.45 0 0 0 2.82-2.91z"/>
-  		</svg>
-  		Share on X
-		</a>	
 
 	</div>
 	<div id="feedback">
 		<div id="feedbackbutton"></div>
 		<div id="feedbackcontent">
 			<div class="inner">
-				<input type="text" class="input" value="e-mail címed" rel="e-mail címed" name="mail" id="f_mail"/>
-				<textarea class="input" rel="üzenet" name="message" id="f_message">üzenet</textarea>
-				<button id="f_send">küldés</button>				
-				<span class="info2">contact: <a href="mailto:versmob@gmail.com" title="contact">versmob@gmail.com</a></span>
-				<span class="info"></span>
+
+<form action="https://formspree.io/f/myzwoodr" method="POST">
+  <input type="email" name="email" placeholder="E-mail címed" required />
+  <textarea name="message" placeholder="Üzenet" required></textarea>
+  
+  <!-- Honeypot field (spam protection) -->
+  <input type="text" name="_gotcha" style="display:none" />
+
+  <!-- Redirect URL after successful send -->
+  <input type="hidden" name="_redirect" value="https://versmob.hu/thankyou.html" />
+
+  <button type="submit">Küldés</button>
+</form>
+
 			</div>
 		</div>
 	</div>
