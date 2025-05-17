@@ -391,3 +391,38 @@ body{
 	color:#fff;
 	text-decoration:none;
 }
+
+#feedbackThanks {
+  display: none;
+  color: #3c763d;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+#feedbackThanks.visible {
+  display: block;
+  opacity: 1;
+}
+
+#feedbackForm input,
+#feedbackForm textarea,
+#feedbackForm button {
+  font-size: 13px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+#feedbackForm input:focus,
+#feedbackForm textarea:focus {
+  border-color: #888;
+  outline: none;
+}
