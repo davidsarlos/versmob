@@ -321,18 +321,16 @@
 		<div id="feedbackcontent">
 			<div class="inner">
 
-<form action="https://formspree.io/f/myzwoodr" method="POST">
+<form id="feedbackForm" action="https://formspree.io/f/myzwoodr" method="POST">
   <input type="email" name="email" placeholder="E-mail címed" required />
   <textarea name="message" placeholder="Üzenet" required></textarea>
-  
-  <!-- Honeypot field (spam protection) -->
   <input type="text" name="_gotcha" style="display:none" />
-
-  <!-- Redirect URL after successful send -->
-  <input type="hidden" name="_redirect" value="https://versmob.hu/thankyou.html" />
-
   <button type="submit">Küldés</button>
 </form>
+
+<div id="feedbackThanks" style="display:none; color: #3c763d; padding-top:10px;">
+  Köszönjük! Üzenetedet megkaptuk.
+</div>
 
 			</div>
 		</div>
@@ -348,6 +346,28 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+</script>
+<script>
+  const form = document.getElementById('feedbackForm');
+  const thanks = document.getElementById('feedbackThanks');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      form.style.display = 'none';
+	thanks.classList.add('visible');
+	form.reset();
+    } else {
+      alert("Hiba történt az üzenet elküldésekor. Próbáld újra.");
+    }
+  });
 </script>
 </body>
 </html>
