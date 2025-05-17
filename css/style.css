@@ -332,18 +332,22 @@ body{
 	background:url(../img/szerinted.jpg);
 	cursor:pointer;
 }
-#feedbackcontent{
-	width:587px;
-	height:201px;
-	color:#fff;
-	background:#3D3D3D;
-	font-family:arial;
-	font-size:12px;
-	line-height:16px;
-	overflow:hidden;
+#feedbackcontent {
+	width: 587px;
+	height: auto; /* instead of fixed 201px */
+	color: #fff;
+	background: #3D3D3D;
+	font-family: arial;
+	font-size: 12px;
+	line-height: 16px;
+	overflow: visible; /* allows success box to be seen */
+	transition: height 0.4s ease-in-out;
 }
-#feedbackcontent .inner{
-	padding:10px;
+#feedbackcontent .inner {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
 }
 #feedbackcontent input, #feedbackcontent textarea, #feedbackcontent button{
 	margin:0 0 5px 0;
@@ -392,12 +396,6 @@ body{
 	text-decoration:none;
 }
 
-
-#feedbackThanks.visible {
-  display: block;
-  opacity: 1;
-}
-
 #feedbackForm input,
 #feedbackForm textarea,
 #feedbackForm button {
@@ -422,4 +420,11 @@ body{
   text-align: center;
   border-radius: 4px;
   font-weight: bold;
+}
+
+
+#feedbackThanks.visible {
+	display: block;
+	opacity: 1;
+	width: 100%;
 }
