@@ -412,19 +412,18 @@ body{
 }
 
 #feedbackThanks {
-  display: none; /* hidden until shown via JS */
-  color: #3c763d;
+  display: none;
+  color: #000; /* <-- legyen fekete a szöveg! */
   background-color: #e6ffe6;
   padding: 15px;
   font-size: 14px;
   text-align: center;
   border-radius: 4px;
   font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
-
-
 #feedbackThanks.visible {
-	display: block;
-	opacity: 1;
-	width: 100%;
+  display: block;
+  opacity: 1;
 }
