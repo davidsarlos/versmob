@@ -1,0 +1,80 @@
+#countdown_dashboard {
+	height: 110px;
+}
+
+.dash {
+	width: 36px;
+	height: 50px;
+	/*background: transparent url('../img/dash.png') 0 0 no-repeat;*/
+	/*background:#fff;*/
+	float: left;
+	margin-top:1px;
+	margin-left:10px;
+	position: relative;
+}
+
+.dash .digit {
+	font-size: 27pt;
+	font-weight: bold;
+	float: left;
+	width: 18px;
+	text-align: center;
+	font-family: tnewpro;
+	color: #333;
+	position: relative;
+	cursor:default;
+}
+
+.dash_title {
+	position: absolute;
+	display: block;
+	bottom: 0px;
+	right: 3px;
+	font-size: 12pt;
+	color: #333;
+	font-family: tnewpro;
+	text-transform: uppercase;
+	letter-spacing: 0px;
+	cursor:default;
+	text-shadow:1px 1px 0 #fff;
+}
+
+.dev_comment {
+	font-size: 14pt;
+	color: #777;
+	text-align: center;
+	font-style: italic;
+	margin: 40px 10px;
+}
+
+.faded {
+	color: #999;
+}
+
+.form_message {
+	width: 400px;
+	padding: 10px;
+	margin: 15px auto;
+	display: none;
+}
+
+#error_message {
+	background-color: #ffe;
+	border-left: 5px solid #bb3;
+	border-right: 5px solid #bb3;
+	color: #770;
+}
+
+#info_message {
+	background-color: #f0f9ff;
+	border: 1px solid #eef;
+}
+
+#loading {
+	text-align: center;
+	margin: 10px;
+	display: none;
+	position: absolute;
+	width: 100%;
+	top: 60px;
+}
