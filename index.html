@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>versmob.hu</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="web.css">
+</head>
+<body style="background: url('img/body_bg2.gif') repeat;">
+  <div id="container">
+    <div id="top" style="background: url('img/top_bottom_bg5.gif') repeat-x;"></div>
+
+    <div id="middle" style="background: url('img/middle_bg3.jpg') no-repeat center center;">
+      <div id="video-container">
+        <div id="front">
+          <img src="img/szerinted.jpg" alt="Szerinted?">
+          <div class="video-wrapper">
+            <iframe src="https://player.vimeo.com/video/22231588" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div id="back">
+          <img src="img/szerinted.jpg" alt="Szerinted?">
+          <div class="video-wrapper">
+            <iframe src="https://player.vimeo.com/video/22253045" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <button id="flip-button">
+        <img src="img/kapcsologomb.jpg" alt="Kapcsoló gomb">
+      </button>
+    </div>
+
+    <div id="bottom" style="background: url('img/top_bottom_bg5.gif') repeat-x;"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="jquery-css-transform.js"></script>
+  <script src="rotate3Di.js"></script>
+  <script src="versmob.js"></script>
+</body>
+</html>
