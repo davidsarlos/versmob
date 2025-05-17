@@ -413,7 +413,7 @@ body{
 
 #feedbackThanks {
   display: none;
-  color: #000; /* <-- legyen fekete a szöveg! */
+  color: #3c763d;
   background-color: #e6ffe6;
   padding: 15px;
   font-size: 14px;
@@ -423,6 +423,7 @@ body{
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
+
 #feedbackThanks.visible {
   display: block;
   opacity: 1;
